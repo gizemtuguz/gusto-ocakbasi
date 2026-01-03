@@ -114,10 +114,10 @@ export function Hero() {
         <div className="flex flex-col items-center gap-4">
           <div className="w-px h-20 bg-white/30" />
           <a 
-            href="tel:+902161234567"
+            href="tel:+905313392249"
             className="text-white/60 hover:text-white transition-colors -rotate-90 text-xs tracking-widest uppercase whitespace-nowrap"
           >
-            +90 216 123 45 67
+            0531 339 22 49
           </a>
           <div className="w-px h-20 bg-white/30" />
         </div>

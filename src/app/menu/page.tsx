@@ -214,7 +214,7 @@ export default function MenuPage() {
               asChild 
               className="bg-gusto-dark hover:bg-gusto-dark-hover text-white rounded-full px-4 sm:px-6 text-sm"
             >
-              <a href="tel:+902161234567" className="flex items-center gap-2">
+              <a href="tel:+905313392249" className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
                 <span className="hidden sm:inline">Rezervasyon</span>
               </a>
@@ -352,10 +352,10 @@ export default function MenuPage() {
         <div className="container mx-auto px-4 text-center">
           <p className="text-white/50 text-xs sm:text-sm mb-2">Rezervasyon</p>
           <a 
-            href="tel:+902161234567" 
+            href="tel:+905313392249" 
             className="font-serif text-xl sm:text-2xl lg:text-3xl text-white hover:text-gusto-hero transition-colors"
           >
-            +90 216 123 45 67
+            0531 339 22 49
           </a>
           <p className="text-white/40 text-xs mt-4">Her gün 11:00 - 23:00</p>
           

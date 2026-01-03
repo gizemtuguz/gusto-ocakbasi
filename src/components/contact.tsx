@@ -40,7 +40,7 @@ export function Contact() {
               Gusto Ocakbaşı
             </p>
             <p className="text-white/70 text-sm sm:text-base mb-2">
-              Örnek Sokak No:1/B Kadıköy/İstanbul
+              İnönü, Adnan Menderes Blv., 33130 Yenişehir/Mersin
             </p>
             <a 
               href="https://maps.google.com" 
@@ -56,7 +56,7 @@ export function Contact() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-lg mx-auto">
             {/* Phone Card */}
             <a 
-              href="tel:+902161234567"
+              href="tel:+905313392249"
               className="group bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 text-center hover:shadow-xl transition-all duration-300 active:scale-95"
             >
               <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gusto-dark flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
@@ -66,7 +66,7 @@ export function Contact() {
                 Telefon
               </h3>
               <p className="text-muted-foreground text-sm">
-                +90 216 123 45 67
+                0531 339 22 49
               </p>
             </a>
 

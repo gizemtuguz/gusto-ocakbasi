@@ -91,7 +91,7 @@ export function Navbar() {
                 asChild 
                 className="bg-gusto-dark hover:bg-gusto-dark-hover text-white rounded-full px-6"
               >
-                <a href="tel:+902161234567">Bizi Arayın</a>
+                <a href="tel:+905313392249">Bizi Arayın</a>
               </Button>
             </div>
 
@@ -157,7 +157,7 @@ export function Navbar() {
             }`}
             style={{ transitionDelay: '400ms' }}
           >
-            <a href="tel:+902161234567" onClick={() => setIsOpen(false)}>
+            <a href="tel:+905313392249" onClick={() => setIsOpen(false)}>
               Bizi Arayın
             </a>
           </Button>
@@ -166,7 +166,7 @@ export function Navbar() {
           <div className={`absolute bottom-8 left-0 right-0 flex flex-col items-center gap-3 transition-all duration-300 ${
             isOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
           }`} style={{ transitionDelay: '500ms' }}>
-            <a href="tel:+902161234567" className="flex items-center gap-2 text-gusto-dark">
+            <a href="tel:+905313392249" className="flex items-center gap-2 text-gusto-dark">
               <Phone className="w-4 h-4" />
               <span className="text-sm">+90 (216) 123 45 67</span>
             </a>
