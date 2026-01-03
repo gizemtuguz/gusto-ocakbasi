@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Phone, Menu, X, AlertTriangle, Leaf, Flame } from "lucide-react";
 import Link from "next/link";
@@ -81,7 +81,7 @@ const menuItems: Record<string, MenuItem[]> = {
 
 // Allergen Icon Component
 function AllergenIcon({ allergen }: { allergen: string }) {
-  const iconMap: Record<string, { bg: string; icon: JSX.Element }> = {
+  const iconMap: Record<string, { bg: string; icon: React.ReactNode }> = {
     "Süt ürünleri": {
       bg: "bg-sky-400",
       icon: (
