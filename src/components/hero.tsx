@@ -1,9 +1,21 @@
+"use client";
+
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { useLoading } from "@/components/page-loader";
 
 export function Hero() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const { setLoading } = useLoading();
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+    setLoading(false);
+  };
+
   return (
     <section
       id="anasayfa"
@@ -11,13 +23,22 @@ export function Hero() {
     >
       {/* Full Screen Background Image */}
       <div className="absolute inset-0">
+        {/* Loading Skeleton */}
+        <div 
+          className={`absolute inset-0 bg-gusto-dark transition-opacity duration-700 ${
+            imageLoaded ? 'opacity-0' : 'opacity-100'
+          }`}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-gusto-dark via-gusto-dark-hover to-gusto-dark animate-pulse" />
+        </div>
         <Image
           src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2574&auto=format&fit=crop"
           alt="Gusto Ocakbaşı - Restoran atmosferi"
           fill
-          className="object-cover"
+          className={`object-cover transition-opacity duration-700 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
           priority
           sizes="100vw"
+          onLoad={handleImageLoad}
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50" />
@@ -45,11 +66,11 @@ export function Hero() {
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto px-6 sm:px-0">
           <Button 
             asChild 
             size="lg"
-            className="bg-gusto-dark hover:bg-gusto-dark-hover text-white rounded-none px-10 sm:px-12 h-12 sm:h-14 text-sm sm:text-base font-medium tracking-wider uppercase"
+            className="w-full sm:w-auto bg-gusto-dark hover:bg-gusto-dark-hover text-white rounded-none px-10 sm:px-12 h-12 sm:h-14 text-sm sm:text-base font-medium tracking-wider uppercase"
           >
             <Link href="/menu">Menüyü İncele</Link>
           </Button>
@@ -57,7 +78,7 @@ export function Hero() {
             asChild 
             size="lg"
             variant="outline"
-            className="bg-white/70 border border-white/50 text-gusto-dark hover:bg-white/90 hover:text-gusto-dark rounded-none px-10 sm:px-12 h-12 sm:h-14 text-sm sm:text-base font-medium tracking-wider uppercase"
+            className="w-full sm:w-auto bg-white/70 border border-white/50 text-gusto-dark hover:bg-white/90 hover:text-gusto-dark rounded-none px-10 sm:px-12 h-12 sm:h-14 text-sm sm:text-base font-medium tracking-wider uppercase"
           >
             <a href="#hakkimizda">Hakkımızda</a>
           </Button>

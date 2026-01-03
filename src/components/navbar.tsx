@@ -16,6 +16,7 @@ const navLinks = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [logoLoaded, setLogoLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,14 +44,25 @@ export function Navbar() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <a href="#anasayfa" className="flex items-center z-50">
+            <a href="#anasayfa" className="flex items-center z-50 relative">
+              {/* Logo Skeleton */}
+              <div 
+                className={`absolute inset-0 bg-gusto-cream rounded transition-opacity duration-300 ${
+                  logoLoaded ? 'opacity-0' : 'opacity-100'
+                }`}
+              >
+                <div className="h-10 lg:h-20 w-24 lg:w-32 bg-gradient-to-r from-gusto-cream via-white to-gusto-cream animate-pulse rounded" />
+              </div>
               <Image
                 src="/images/logo/logo.jpg"
                 alt="Gusto Ocakbaşı"
                 width={120}
                 height={50}
-                className="h-10 lg:h-20 w-auto object-contain"
+                className={`h-10 lg:h-20 w-auto object-contain transition-opacity duration-300 ${
+                  logoLoaded ? 'opacity-100' : 'opacity-0'
+                }`}
                 priority
+                onLoad={() => setLogoLoaded(true)}
               />
             </a>
 

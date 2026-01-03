@@ -4,6 +4,15 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import { Search, X, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
+// Loading skeleton for individual images
+function ImageSkeleton() {
+  return (
+    <div className="absolute inset-0 bg-gusto-cream">
+      <div className="absolute inset-0 bg-gradient-to-r from-gusto-cream via-white to-gusto-cream animate-pulse" />
+    </div>
+  );
+}
+
 const galleryImages = [
   { 
     id: 1, 
@@ -34,7 +43,12 @@ export function About() {
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState(0);
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const handleImageLoad = (id: number) => {
+    setLoadedImages(prev => new Set(prev).add(id));
+  };
 
   // Minimum swipe distance
   const minSwipeDistance = 50;
@@ -174,13 +188,19 @@ export function About() {
                   className="group relative aspect-square overflow-hidden cursor-pointer"
                   onClick={() => openLightbox(index)}
                 >
+                  {/* Loading Skeleton */}
+                  {!loadedImages.has(image.id) && <ImageSkeleton />}
+                  
                   {/* Image */}
                   <Image
                     src={image.src}
                     alt={image.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className={`object-cover transition-all duration-500 group-hover:scale-110 ${
+                      loadedImages.has(image.id) ? 'opacity-100' : 'opacity-0'
+                    }`}
                     sizes="(max-width: 768px) 50vw, 25vw"
+                    onLoad={() => handleImageLoad(image.id)}
                   />
                   
                   {/* Hover overlay with zoom icon */}

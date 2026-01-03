@@ -70,6 +70,7 @@ const menuItems = {
 export default function MenuPage() {
   const [activeCategory, setActiveCategory] = useState("kebaplar");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [logoLoaded, setLogoLoaded] = useState(false);
 
   return (
     <main className="min-h-screen bg-gusto-page-bg">
@@ -88,13 +89,24 @@ export default function MenuPage() {
 
             {/* Logo */}
             <Link href="/" className="absolute left-1/2 -translate-x-1/2">
+              {/* Logo Skeleton */}
+              <div 
+                className={`absolute inset-0 transition-opacity duration-300 ${
+                  logoLoaded ? 'opacity-0' : 'opacity-100'
+                }`}
+              >
+                <div className="h-10 lg:h-14 w-24 lg:w-32 bg-gradient-to-r from-gusto-page-bg via-white to-gusto-page-bg animate-pulse rounded" />
+              </div>
               <Image
                 src="/images/logo/logo.jpg"
                 alt="Gusto Ocakbaşı"
                 width={120}
                 height={50}
-                className="h-10 lg:h-14 w-auto object-contain"
+                className={`h-10 lg:h-14 w-auto object-contain transition-opacity duration-300 ${
+                  logoLoaded ? 'opacity-100' : 'opacity-0'
+                }`}
                 priority
+                onLoad={() => setLogoLoaded(true)}
               />
             </Link>
 
