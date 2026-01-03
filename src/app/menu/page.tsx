@@ -17,53 +17,53 @@ const categories = [
 
 const menuItems = {
   kebaplar: [
-    { name: "Adana Kebap", description: "El yapımı acılı kıyma kebabı, közlenmiş domates ve biber ile", price: "₺320" },
-    { name: "Urfa Kebap", description: "Özel baharatlarla hazırlanan acısız kıyma kebabı", price: "₺320" },
-    { name: "Patlıcan Kebap", description: "Kuşbaşı et, közlenmiş patlıcan dilimleri ile", price: "₺380" },
-    { name: "Kuzu Şiş", description: "Marine edilmiş kuzu but parçaları, özel soslarla", price: "₺360" },
-    { name: "Tavuk Şiş", description: "Özel marine soslu tavuk göğsü", price: "₺280" },
-    { name: "Beyti Kebap", description: "Lavaş sarmalı kıyma kebabı, yoğurt ve özel sos ile", price: "₺400" },
-    { name: "Karışık Izgara", description: "Adana, Urfa, kuzu şiş ve tavuk şiş bir arada", price: "₺550" },
-    { name: "Ali Nazik", description: "Közlenmiş patlıcan püre üzeri tereyağlı kuşbaşı", price: "₺420" },
-    { name: "Kaburga Kebabı", description: "8 saatte pişirilen dana kaburga, özel sos ile", price: "₺480" },
+    { name: "Adana Kebap", description: "El yapımı acılı kıyma kebabı, közlenmiş domates ve biber ile", price: "₺320", image: "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=200&h=200&fit=crop" },
+    { name: "Urfa Kebap", description: "Özel baharatlarla hazırlanan acısız kıyma kebabı", price: "₺320", image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=200&h=200&fit=crop" },
+    { name: "Patlıcan Kebap", description: "Kuşbaşı et, közlenmiş patlıcan dilimleri ile", price: "₺380", image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=200&h=200&fit=crop" },
+    { name: "Kuzu Şiş", description: "Marine edilmiş kuzu but parçaları, özel soslarla", price: "₺360", image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=200&h=200&fit=crop" },
+    { name: "Tavuk Şiş", description: "Özel marine soslu tavuk göğsü", price: "₺280", image: "https://images.unsplash.com/photo-1532636875304-0c89119571d3?w=200&h=200&fit=crop" },
+    { name: "Beyti Kebap", description: "Lavaş sarmalı kıyma kebabı, yoğurt ve özel sos ile", price: "₺400", image: "https://images.unsplash.com/photo-1561651823-34feb02250e4?w=200&h=200&fit=crop" },
+    { name: "Karışık Izgara", description: "Adana, Urfa, kuzu şiş ve tavuk şiş bir arada", price: "₺550", image: "https://images.unsplash.com/photo-1558030006-450675393462?w=200&h=200&fit=crop" },
+    { name: "Ali Nazik", description: "Közlenmiş patlıcan püre üzeri tereyağlı kuşbaşı", price: "₺420", image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=200&h=200&fit=crop" },
+    { name: "Kaburga Kebabı", description: "8 saatte pişirilen dana kaburga, özel sos ile", price: "₺480", image: "https://images.unsplash.com/photo-1504973960431-1c467e159aa4?w=200&h=200&fit=crop" },
   ],
   pideler: [
-    { name: "Kuşbaşılı Pide", description: "Dana kuşbaşı, domates ve biber ile", price: "₺280" },
-    { name: "Kaşarlı Pide", description: "Bol kaşar peyniri ile", price: "₺180" },
-    { name: "Karışık Pide", description: "Sucuk, kaşar, pastırma ile", price: "₺260" },
-    { name: "Lahmacun", description: "İnce hamur, özel kıyma harcı (2 adet)", price: "₺120" },
+    { name: "Kuşbaşılı Pide", description: "Dana kuşbaşı, domates ve biber ile", price: "₺280", image: "https://images.unsplash.com/photo-1627308595171-d1b5d67129c4?w=200&h=200&fit=crop" },
+    { name: "Kaşarlı Pide", description: "Bol kaşar peyniri ile", price: "₺180", image: "https://images.unsplash.com/photo-1600628421055-4d30de868b8f?w=200&h=200&fit=crop" },
+    { name: "Karışık Pide", description: "Sucuk, kaşar, pastırma ile", price: "₺260", image: "https://images.unsplash.com/photo-1593246049226-ded77bf90326?w=200&h=200&fit=crop" },
+    { name: "Lahmacun", description: "İnce hamur, özel kıyma harcı (2 adet)", price: "₺120", image: "https://images.unsplash.com/photo-1622973536968-3ead9e780960?w=200&h=200&fit=crop" },
   ],
   baslangiclar: [
-    { name: "Humus", description: "Tahinli nohut ezmesi, zeytinyağı ile", price: "₺85" },
-    { name: "Babagannuş", description: "Közlenmiş patlıcan ezmesi", price: "₺90" },
-    { name: "Haydari", description: "Süzme yoğurt, sarımsak ve dereotu", price: "₺75" },
-    { name: "Atom", description: "Acılı biber ezmesi, cevizli", price: "₺95" },
-    { name: "Sigara Böreği", description: "Peynirli, çıtır (4 adet)", price: "₺110" },
-    { name: "Meze Tabağı", description: "5 çeşit meze bir arada (2 kişilik)", price: "₺220" },
-    { name: "Mercimek Çorbası", description: "Geleneksel tarif, limon ile", price: "₺65" },
+    { name: "Humus", description: "Tahinli nohut ezmesi, zeytinyağı ile", price: "₺85", image: "https://images.unsplash.com/photo-1577805947697-89e18249d767?w=200&h=200&fit=crop" },
+    { name: "Babagannuş", description: "Közlenmiş patlıcan ezmesi", price: "₺90", image: "https://images.unsplash.com/photo-1626203234257-4b7e8f7df9c1?w=200&h=200&fit=crop" },
+    { name: "Haydari", description: "Süzme yoğurt, sarımsak ve dereotu", price: "₺75", image: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=200&h=200&fit=crop" },
+    { name: "Atom", description: "Acılı biber ezmesi, cevizli", price: "₺95", image: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=200&h=200&fit=crop" },
+    { name: "Sigara Böreği", description: "Peynirli, çıtır (4 adet)", price: "₺110", image: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?w=200&h=200&fit=crop" },
+    { name: "Meze Tabağı", description: "5 çeşit meze bir arada (2 kişilik)", price: "₺220", image: "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=200&h=200&fit=crop" },
+    { name: "Mercimek Çorbası", description: "Geleneksel tarif, limon ile", price: "₺65", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=200&h=200&fit=crop" },
   ],
   salatalar: [
-    { name: "Çoban Salata", description: "Domates, salatalık, biber, soğan, zeytinyağı", price: "₺75" },
-    { name: "Mevsim Salata", description: "Marul, havuç, kırmızı lahana, turp", price: "₺70" },
-    { name: "Piyaz", description: "Kuru fasulye, soğan, maydanoz, sumak", price: "₺85" },
-    { name: "Gavurdağı Salatası", description: "Nar ekşisi, ceviz, domates", price: "₺95" },
-    { name: "Roka Salatası", description: "Parmesan, cherry domates, balsamik sos", price: "₺110" },
+    { name: "Çoban Salata", description: "Domates, salatalık, biber, soğan, zeytinyağı", price: "₺75", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=200&h=200&fit=crop" },
+    { name: "Mevsim Salata", description: "Marul, havuç, kırmızı lahana, turp", price: "₺70", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&h=200&fit=crop" },
+    { name: "Piyaz", description: "Kuru fasulye, soğan, maydanoz, sumak", price: "₺85", image: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=200&h=200&fit=crop" },
+    { name: "Gavurdağı Salatası", description: "Nar ekşisi, ceviz, domates", price: "₺95", image: "https://images.unsplash.com/photo-1607532941433-304659e8198a?w=200&h=200&fit=crop" },
+    { name: "Roka Salatası", description: "Parmesan, cherry domates, balsamik sos", price: "₺110", image: "https://images.unsplash.com/photo-1604497181015-76590d828b75?w=200&h=200&fit=crop" },
   ],
   tatlilar: [
-    { name: "Künefe", description: "Tel kadayıf, peynir, şerbet, Antep fıstığı", price: "₺150" },
-    { name: "Baklava", description: "Antep fıstıklı, el açması (4 dilim)", price: "₺180" },
-    { name: "Sütlaç", description: "Fırında pişmiş, tarçınlı", price: "₺90" },
-    { name: "Katmer", description: "Gaziantep usulü, kaymak ve fıstık ile", price: "₺160" },
-    { name: "Dondurma", description: "Maraş usulü (3 top)", price: "₺95" },
+    { name: "Künefe", description: "Tel kadayıf, peynir, şerbet, Antep fıstığı", price: "₺150", image: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=200&h=200&fit=crop" },
+    { name: "Baklava", description: "Antep fıstıklı, el açması (4 dilim)", price: "₺180", image: "https://images.unsplash.com/photo-1598110750624-207050c4f28c?w=200&h=200&fit=crop" },
+    { name: "Sütlaç", description: "Fırında pişmiş, tarçınlı", price: "₺90", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=200&h=200&fit=crop" },
+    { name: "Katmer", description: "Gaziantep usulü, kaymak ve fıstık ile", price: "₺160", image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=200&h=200&fit=crop" },
+    { name: "Dondurma", description: "Maraş usulü (3 top)", price: "₺95", image: "https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=200&h=200&fit=crop" },
   ],
   icecekler: [
-    { name: "Ayran", description: "Ev yapımı, köpüklü", price: "₺35" },
-    { name: "Şalgam", description: "Acılı veya acısız", price: "₺40" },
-    { name: "Türk Kahvesi", description: "Geleneksel, lokum ile", price: "₺50" },
-    { name: "Çay", description: "Rize çayı, demlik", price: "₺30" },
-    { name: "Taze Sıkılmış Portakal Suyu", description: "Günlük taze", price: "₺65" },
-    { name: "Limonata", description: "Ev yapımı, naneli", price: "₺55" },
-    { name: "Meşrubat", description: "Coca-Cola, Fanta, Sprite", price: "₺45" },
+    { name: "Ayran", description: "Ev yapımı, köpüklü", price: "₺35", image: "https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?w=200&h=200&fit=crop" },
+    { name: "Şalgam", description: "Acılı veya acısız", price: "₺40", image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=200&h=200&fit=crop" },
+    { name: "Türk Kahvesi", description: "Geleneksel, lokum ile", price: "₺50", image: "https://images.unsplash.com/photo-1514066558159-fc8c737ef259?w=200&h=200&fit=crop" },
+    { name: "Çay", description: "Rize çayı, demlik", price: "₺30", image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=200&h=200&fit=crop" },
+    { name: "Taze Sıkılmış Portakal Suyu", description: "Günlük taze", price: "₺65", image: "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=200&h=200&fit=crop" },
+    { name: "Limonata", description: "Ev yapımı, naneli", price: "₺55", image: "https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=200&h=200&fit=crop" },
+    { name: "Meşrubat", description: "Coca-Cola, Fanta, Sprite", price: "₺45", image: "https://images.unsplash.com/photo-1581006852262-e4307cf6283a?w=200&h=200&fit=crop" },
   ],
 };
 
@@ -180,28 +180,44 @@ export default function MenuPage() {
           </div>
 
           {/* Menu Items */}
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             {menuItems[activeCategory as keyof typeof menuItems].map((item, index) => (
               <div 
                 key={item.name}
-                className={`py-6 ${
+                className={`py-5 sm:py-6 ${
                   index !== menuItems[activeCategory as keyof typeof menuItems].length - 1 
                     ? 'border-b border-gusto-brown/10' 
                     : ''
                 }`}
               >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1">
-                    <h3 className="font-serif text-lg sm:text-xl font-semibold text-gusto-dark mb-1">
-                      {item.name}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {item.description}
-                    </p>
+                <div className="flex items-center gap-4">
+                  {/* Product Image */}
+                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-sm overflow-hidden shrink-0">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      className="object-cover"
+                      sizes="80px"
+                    />
                   </div>
-                  <span className="font-serif text-lg sm:text-xl font-bold text-gusto-brown shrink-0">
-                    {item.price}
-                  </span>
+                  
+                  {/* Content */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-serif text-base sm:text-lg font-semibold text-gusto-dark mb-0.5 truncate">
+                          {item.name}
+                        </h3>
+                        <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed line-clamp-2">
+                          {item.description}
+                        </p>
+                      </div>
+                      <span className="font-serif text-base sm:text-lg font-bold text-gusto-hero shrink-0">
+                        {item.price}
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
