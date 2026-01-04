@@ -12,7 +12,7 @@ export function Footer() {
           <div className="col-span-2 lg:col-span-1">
             <div className="mb-4">
               <Image
-                src="/images/logo/logo."
+                src="/images/logo/logo.jpg"
                 alt="Gusto Ocakbaşı"
                 width={100}
                 height={45}

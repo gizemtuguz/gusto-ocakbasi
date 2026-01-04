@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { Search, X, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 // Loading skeleton for individual images
 function ImageSkeleton() {
@@ -44,6 +45,7 @@ export function About() {
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState(0);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleImageLoad = (id: number) => {
@@ -64,12 +66,18 @@ export function About() {
   };
 
   const goToPrevious = useCallback(() => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
     setCurrentIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
-  }, []);
+    setTimeout(() => setIsTransitioning(false), 300);
+  }, [isTransitioning]);
 
   const goToNext = useCallback(() => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
     setCurrentIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
-  }, []);
+    setTimeout(() => setIsTransitioning(false), 300);
+  }, [isTransitioning]);
 
   // Touch handlers for swipe
   const onTouchStart = (e: React.TouchEvent) => {
@@ -212,6 +220,17 @@ export function About() {
                 </div>
               ))}
             </div>
+            
+            {/* View Full Gallery Button */}
+            <div className="mt-4 text-center">
+              <Link 
+                href="/galeri"
+                className="inline-flex items-center gap-2 text-gusto-brown hover:text-gusto-dark transition-colors text-sm font-medium"
+              >
+                <span>Tüm Galeriyi Görüntüle</span>
+                <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -283,18 +302,19 @@ export function About() {
         {/* Image with drag feedback */}
         <div 
           className={`relative w-full h-full max-w-5xl max-h-[80vh] mx-4 sm:mx-16 ${
-            isDragging ? '' : 'transition-transform duration-300'
+            isDragging ? '' : 'transition-all duration-300 ease-out'
           }`}
           style={{ 
             transform: `translateX(${dragOffset}px)`,
           }}
         >
           <Image
+            key={currentIndex}
             src={galleryImages[currentIndex].src}
             alt={galleryImages[currentIndex].title}
             fill
-            className={`object-contain select-none transition-all duration-500 ${
-              lightboxOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
+            className={`object-contain select-none transition-opacity duration-300 ease-out ${
+              lightboxOpen && !isTransitioning ? 'opacity-100' : 'opacity-0'
             }`}
             sizes="100vw"
             priority
